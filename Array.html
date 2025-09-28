@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+
+
+        <script>
+            //modification
+            var fruit = ["apple", "banana", "guava"];
+            document.writeln(fruit +""+"<br>");
+            fruit[1] = "saging";
+            fruit[0] = 55;
+            document.writeln(fruit +""+"<br>");
+            document.writeln("<br>");
+            //delete
+            delete fruit[2];
+            document.writeln(fruit + "" + "<br>" + "<br>");
+
+
+            //sort
+            var alp = ["a", "b", "c", "d", "e", "f", "g", 1, 2, 3, 4];
+            alp.sort();
+            document.writeln(alp + ""+ "<br>" +"<br>");
+            //reverse
+            alp.reverse();
+            document.writeln(alp + "" + "<br>");
+
+
+
+            //pop will delete your last value in the array
+            var poppush = ["lebron", "kobe", "kawhi", "steph", "kyrie"];
+            poppush.pop();
+            document.writeln("<br>"+ poppush + "<br");
+            //shift will be the opposite of the pop which is the first value in the array was delete.
+
+            //push will add a value at the lastpart of the array.
+            poppush.push("bronny");
+            document.writeln("<br>"+ poppush + "<br>");
+            //unshift will be the oppoosite of the push which will add a value at the firstpart of the array.s
+
+            //concat method is combine to arrays to be come 1 array.
+            var concatjoinA = ["luffy", "tanjiro", "sakuragi"];
+            var concatjoinB = ["one piece", "demon slayer", "slamdunk"];
+            var result1 = concatjoinA.concat(concatjoinB);
+            document.writeln("<br>"+ result1 + "<br>");
+            //join method will allow you to join the array or remove the "," from the result.
+            var result2 = result1.join(" ");
+            document.writeln("<br>"+ result2 + "<br>");
+
+
+            //slice method allow you to delete the previous array value depends on the index it started.
+            var SS = ["dota", "valorant", "LOL", "COD", "L4D"];
+            document.writeln("<br>" + SS + "<br>");
+            var resultss = SS.slice(2);
+            document.writeln("<br>" + resultss + "<br>");
+            //splice allow you to modified/change the array value using indexs.
+            var sp = ["apple", "red", "green", "mango", "cherry", "pink", "sakura"];
+            document.writeln("<br>" + sp + "<br>");
+            sp.splice(5, 4, "orange&", "lemon");
+            document.writeln("<br>" + sp + "<br>");
+
+
+            //isArray method helps you identify the variable if it us a variable or not
+            if(Array.isArray(sp)){
+                document.writeln("This is a array");
+            }else {
+                document.writeln("This is not a array");
+            }
+
+            //indexof allow you to verified or search the index of the value of the array
+            var inof = ["javascript", "html", "css", "html", "boostrap", "react.js"];
+            var resultinof = inof.indexOf("html");
+            document.writeln("<br>"+ resultinof + "<br>");
+            //lastindexof allow you to verified the last index of the some array value. but input first the starting point of the array value
+            var resulinof1 = inof.lastIndexOf("html", 2);
+            document.writeln("<br>"+ resulinof1 + "<br>");
+
+
+            //forEach method allow you to identify the index for each array value. but make a function without function it will not work.
+            var eeach = ["zero", "one", "two", "three", "four", "five"];
+            eeach.forEach(forEachfunc);
+            function forEachfunc(numero, magkano){
+                document.writeln(magkano + "   "+ numero + "<br>");
+            }
+
+            //toString make your array value as read as string
+            //fill method will allow you fill the whole value of the array so if you have 3 it will fill 3x.
+            //include method will allow you yo seach if the value is includes in the array.
+            var inc = [20, 30, 40, 50, 60, 70, 100, 110];
+            document.writeln(inc + "<br>");
+            var resultinc = inc.includes(60);
+            document.writeln(resultinc + "<br>");
+            //some will allow you to check the value in the array if it has any of them meets the conditions.
+            var resultsome = inc.some(checkvalue);
+            document.writeln("<br>" + resultsome + "<br>");
+            //every will allow you to check the value in the array if it has every value of them meets the conditions.
+            var resultevery = inc.every(checkeveryvalue);
+            document.writeln("<br>" + resultevery + "<br>");
+
+            function checkvalue(limit){
+                return limit >= 110;
+            }
+
+            function checkeveryvalue(e){
+                return e >= 100;
+            }
+
+        </script>
+    </body>
+
+</html>
